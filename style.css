@@ -3,6 +3,16 @@ body {
     text-align: center; /* 文字を中央揃え */
     font-family: Arial, sans-serif; /* フォント */
 }
+body {
+    text-align: center;
+}
+body {
+    font-family: 'Arial', 'ヒラギノ角ゴ ProN', 'メイリオ', sans-serif;
+}
+body {
+    background-color: #f5f5f5; /* 背景色（薄いグレー） */
+    color: #333; /* 文字色（黒っぽい） */
+}
 
 h1 {
     color: #ff0000;
