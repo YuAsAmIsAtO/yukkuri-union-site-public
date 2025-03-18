@@ -1,19 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タレント紹介サイト</title>
+    <title>実況者連合</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ナビゲーションバー -->
+    <!-- ナビゲーション -->
     <nav>
         <ul>
             <li><a href="#home">HOME</a></li>
             <li><a href="#news">NEWS</a></li>
+            <li><a href="#new-videos">新着動画</a></li>
+            <li><a href="#recommended-videos">おすすめ動画</a></li>
             <li><a href="#talent">TALENT</a></li>
             <li><a href="#collaboration">COLLABORATION</a></li>
         </ul>
@@ -21,55 +22,94 @@
 
     <!-- HOME -->
     <section id="home">
-        <h1>Welcome to Our Talent Site</h1>
-        <p>サイトのテーマや紹介文を記載</p>
+        <h1>実況者連合</h1>
+        <p>テーマ画像が入る</p>
     </section>
 
     <!-- NEWS -->
     <section id="news">
-        <h2>Latest News</h2>
-        <p>最新情報をここに表示</p>
+        <h2>NEWS</h2>
+        <p>最新のお知らせをここに表示</p>
+    </section>
+
+    <!-- 新着動画 -->
+    <section id="new-videos">
+        <h2>新着動画 🔥</h2>
+
+        <div class="channel">
+            <h3>実況者A</h3>
+            <div class="video-container">
+                <div class="video">
+                    <img src="thumbnail1.jpg" alt="新着動画1">
+                    <a href="https://youtube.com/watch?v=xxxxx" target="_blank">タイトル1</a>
+                </div>
+                <div class="video">
+                    <img src="thumbnail2.jpg" alt="新着動画2">
+                    <a href="https://youtube.com/watch?v=xxxxx" target="_blank">タイトル2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="channel">
+            <h3>実況者B</h3>
+            <div class="video-container">
+                <div class="video">
+                    <img src="thumbnail3.jpg" alt="新着動画3">
+                    <a href="https://youtube.com/watch?v=xxxxx" target="_blank">タイトル3</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- おすすめ動画 -->
+    <section id="recommended-videos">
+        <h2>おすすめ動画 🌟</h2>
+
+        <div class="channel">
+            <h3>実況者A</h3>
+            <div class="video-container">
+                <div class="video">
+                    <img src="thumbnail4.jpg" alt="おすすめ動画1">
+                    <a href="https://youtube.com/watch?v=xxxxx" target="_blank">おすすめ1</a>
+                </div>
+                <div class="video">
+                    <img src="thumbnail5.jpg" alt="おすすめ動画2">
+                    <a href="https://youtube.com/watch?v=xxxxx" target="_blank">おすすめ2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="channel">
+            <h3>実況者C</h3>
+            <div class="video-container">
+                <div class="video">
+                    <img src="thumbnail6.jpg" alt="おすすめ動画3">
+                    <a href="https://youtube.com/watch?v=xxxxx" target="_blank">おすすめ3</a>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- TALENT -->
     <section id="talent">
-        <h2>Our Talents</h2>
+        <h2>TALENT</h2>
         <div class="talent-list">
             <div class="talent">
-                <img src="person1.jpg" alt="Person 1">
-                <h3>タレント名1</h3>
-                <a href="https://youtube.com">YouTube</a>
-                <a href="https://x.com">X (Twitter)</a>
-            </div>
-            <div class="talent">
-                <img src="person2.jpg" alt="Person 2">
-                <h3>タレント名2</h3>
-                <a href="https://youtube.com">YouTube</a>
-                <a href="https://x.com">X (Twitter)</a>
+                <img src="talent1.jpg" alt="タレント1">
+                <p>実況者1</p>
+                <a href="https://youtube.com/channel/xxxxx" target="_blank">YouTube</a>
+                <a href="https://twitter.com/xxxxx" target="_blank">X</a>
             </div>
         </div>
     </section>
 
-    <!-- コラボ予定 -->
+    <!-- COLLABORATION -->
     <section id="collaboration">
-        <h2>Upcoming Collaborations</h2>
-        <p>コラボ予定をここに記載</p>
+        <h2>COLLABORATION</h2>
+        <p>コラボ予定など</p>
     </section>
-
-    <!-- スムーズスクロール -->
-    <script>
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50,  // ナビバーの高さを考慮
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 
 </body>
 </html>
