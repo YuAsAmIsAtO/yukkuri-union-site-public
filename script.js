@@ -1,16 +1,15 @@
+// 動画タブ切り替え
 function switchTab(tab) {
-    document.querySelectorAll(".video-section").forEach(section => {
-        section.classList.remove("active");
-    });
-    document.querySelectorAll(".tab-button").forEach(button => {
-        button.classList.remove("active");
-    });
+    document.getElementById("new-videos").classList.remove("active");
+    document.getElementById("recommended-videos").classList.remove("active");
 
     if (tab === "new") {
         document.getElementById("new-videos").classList.add("active");
-        document.querySelector(".tab-button:nth-child(1)").classList.add("active");
     } else {
         document.getElementById("recommended-videos").classList.add("active");
-        document.querySelector(".tab-button:nth-child(2)").classList.add("active");
     }
+
+    // タブの見た目を変更
+    document.querySelectorAll(".tab-button").forEach(button => button.classList.remove("active"));
+    document.querySelector(`.tab-button[onclick="switchTab('${tab}')"]`).classList.add("active");
 }
