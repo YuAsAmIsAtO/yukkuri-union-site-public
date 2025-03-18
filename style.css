@@ -24,12 +24,19 @@ nav ul {
     flex-wrap: wrap;
 }
 nav ul li {
-    margin: 5px 15px;
+    margin: 0;
 }
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* 仕切り線 */
+nav ul li:not(:last-child) a {
+    border-right: 1px solid white;
 }
 
 /* 各セクション */
@@ -78,13 +85,14 @@ section {
     text-decoration: none;
 }
 
-/* スマホ対応（レスポンシブデザイン） */
+/* スマホ対応（ナビバーを横並び＋文字サイズ調整） */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
     }
-    .talent {
-        width: 100%;
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 10px;
     }
 }
