@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -21,7 +22,7 @@
     <!-- HOME -->
     <section id="home">
         <h1>Welcome to Our Talent Site</h1>
-        <p>ここにサイトのテーマや紹介文を入れる</p>
+        <p>サイトのテーマや紹介文を記載</p>
     </section>
 
     <!-- NEWS -->
@@ -33,17 +34,19 @@
     <!-- TALENT -->
     <section id="talent">
         <h2>Our Talents</h2>
-        <div class="talent">
-            <img src="person1.jpg" alt="Person 1">
-            <h3>タレント名1</h3>
-            <a href="https://youtube.com">YouTube</a>
-            <a href="https://x.com">X (Twitter)</a>
-        </div>
-        <div class="talent">
-            <img src="person2.jpg" alt="Person 2">
-            <h3>タレント名2</h3>
-            <a href="https://youtube.com">YouTube</a>
-            <a href="https://x.com">X (Twitter)</a>
+        <div class="talent-list">
+            <div class="talent">
+                <img src="person1.jpg" alt="Person 1">
+                <h3>タレント名1</h3>
+                <a href="https://youtube.com">YouTube</a>
+                <a href="https://x.com">X (Twitter)</a>
+            </div>
+            <div class="talent">
+                <img src="person2.jpg" alt="Person 2">
+                <h3>タレント名2</h3>
+                <a href="https://youtube.com">YouTube</a>
+                <a href="https://x.com">X (Twitter)</a>
+            </div>
         </div>
     </section>
 
@@ -53,13 +56,15 @@
         <p>コラボ予定をここに記載</p>
     </section>
 
-    <!-- スムーズスクロール用のJavaScript -->
+    <!-- スムーズスクロール -->
     <script>
         document.querySelectorAll('nav ul li a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,  // ナビバーの高さを考慮
                     behavior: 'smooth'
                 });
             });
