@@ -1,3 +1,11 @@
+/* 全体スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
 /* ナビゲーションバー */
 nav {
     position: fixed;
@@ -32,13 +40,40 @@ nav ul li:not(:last-child) a {
     border-right: 1px solid white;
 }
 
+/* 各セクションのスタイル */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+#home { background-color: #ffcccc; }
+#news { background-color: #ccffcc; }
+#talent { background-color: #ccccff; }
+#collaboration { background-color: #ffffcc; }
+
+/* TALENTカード */
+.talent-card {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.talent-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 /* スマホ対応 */
 @media (max-width: 768px) {
     nav ul {
-        flex-wrap: nowrap; /* スマホでも横並び */
+        flex-wrap: nowrap; /* 横並び */
     }
     nav ul li a {
-        font-size: 14px; /* 文字を小さくする */
-        padding: 8px 10px; /* クリック範囲を確保 */
+        font-size: 14px;
+        padding: 8px 10px;
     }
 }
