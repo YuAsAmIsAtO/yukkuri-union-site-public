@@ -1,4 +1,11 @@
-/* ナビゲーションバーの固定 */
+/* ベース設定 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 50px; /* ナビバーの高さを考慮 */
+}
+
+/* ナビゲーションバー（固定表示） */
 nav {
     position: fixed;
     top: 0;
@@ -14,9 +21,10 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 nav ul li {
-    margin: 0 15px;
+    margin: 5px 15px;
 }
 nav ul li a {
     color: white;
@@ -24,14 +32,14 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* セクションのスタイル */
+/* 各セクション */
 section {
     padding: 80px 20px;
     min-height: 100vh;
     text-align: center;
 }
 
-/* 各セクションの背景 */
+/* 背景色 */
 #home {
     background: url('your-image.jpg') no-repeat center center/cover;
     color: white;
@@ -46,12 +54,16 @@ section {
     background-color: #d0d0d0;
 }
 
-/* タレント紹介のスタイル */
-.talent {
+/* タレントリスト（レスポンシブ対応） */
+.talent-list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.talent {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
 }
 .talent img {
     width: 150px;
@@ -64,4 +76,15 @@ section {
     margin: 5px;
     color: #0073e6;
     text-decoration: none;
+}
+
+/* スマホ対応（レスポンシブデザイン） */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .talent {
+        width: 100%;
+    }
 }
