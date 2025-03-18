@@ -1,11 +1,4 @@
-/* ベース設定 */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding-top: 50px; /* ナビバーの高さを考慮 */
-}
-
-/* ナビゲーションバー（固定表示） */
+/* ナビゲーションバー */
 nav {
     position: fixed;
     top: 0;
@@ -24,67 +17,28 @@ nav ul {
     flex-wrap: wrap;
 }
 nav ul li {
-    margin: 5px 15px;
+    margin: 0;
 }
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-
-/* 各セクション */
-section {
-    padding: 80px 20px;
-    min-height: 100vh;
-    text-align: center;
-}
-
-/* 背景色 */
-#home {
-    background: url('your-image.jpg') no-repeat center center/cover;
-    color: white;
-}
-#news {
-    background-color: #f8f8f8;
-}
-#talent {
-    background-color: #e0e0e0;
-}
-#collaboration {
-    background-color: #d0d0d0;
-}
-
-/* タレントリスト（レスポンシブ対応） */
-.talent-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.talent {
-    width: 250px;
-    margin: 20px;
-    text-align: center;
-}
-.talent img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.talent a {
+    padding: 10px 15px;
     display: block;
-    margin: 5px;
-    color: #0073e6;
-    text-decoration: none;
 }
 
-/* スマホ対応（レスポンシブデザイン） */
+/* 仕切り線 */
+nav ul li:not(:last-child) a {
+    border-right: 1px solid white;
+}
+
+/* スマホ対応 */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap; /* スマホでも横並び */
     }
-    .talent {
-        width: 100%;
+    nav ul li a {
+        font-size: 14px; /* 文字を小さくする */
+        padding: 8px 10px; /* クリック範囲を確保 */
     }
 }
