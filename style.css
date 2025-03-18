@@ -45,22 +45,32 @@ section {
     text-align: center;
 }
 
-/* 背景色 */
-#home {
-    background: url('your-image.jpg') no-repeat center center/cover;
+/* 動画タブ */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.tab-button {
+    background: #0073e6;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
 }
-#news, #new-videos, #recommended-videos {
-    background-color: #f8f8f8;
-}
-#talent {
-    background-color: #e0e0e0;
-}
-#collaboration {
-    background-color: #d0d0d0;
+.tab-button.active {
+    background: #005bb5;
 }
 
 /* 動画セクション */
+.video-section {
+    display: none;
+}
+.video-section.active {
+    display: block;
+}
 .channel {
     margin-bottom: 40px;
 }
@@ -86,30 +96,6 @@ section {
 .video a {
     display: block;
     margin-top: 5px;
-    color: #0073e6;
-    text-decoration: none;
-}
-
-/* タレント */
-.talent-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.talent {
-    width: 250px;
-    margin: 20px;
-    text-align: center;
-}
-.talent img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.talent a {
-    display: block;
-    margin: 5px;
     color: #0073e6;
     text-decoration: none;
 }
