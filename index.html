@@ -1,15 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タレント紹介サイト</title>
+    <style>
+        /* ナビゲーションバーの固定 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        #home {
+            background: url('your-image.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        #news {
+            background-color: #f8f8f8;
+        }
+        #talent {
+            background-color: #e0e0e0;
+        }
+        #collaboration {
+            background-color: #d0d0d0;
+        }
+
+        /* タレント紹介のスタイル */
+        .talent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .talent img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .talent a {
+            display: block;
+            margin: 5px;
+            color: #0073e6;
+            text-decoration: none;
+        }
+    </style>
+</head>
 <body>
-    <h1>底辺ゆっくり実況者連合</h1>
 
-    <section>
-        <img src="images/logo.png" alt="サイトのロゴ" width="200">
-    </section>
-
-    <section>
-        <h2>チャンネル一覧</h2>
+    <!-- ナビゲーションバー -->
+    <nav>
         <ul>
-            <li><a href="https://www.youtube.com/channel/UCV5iqVGj3O2DbFCGrpW1L3A">チャンネル1</a></li>
-            <li><a href="https://youtube.com/@baluto-zh7og?si=AFyxquONUtxgoYyW">ばるとチャンネル</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#talent">TALENT</a></li>
+            <li><a href="#collaboration">COLLABORATION</a></li>
         </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+        <h1>Welcome to Our Talent Site</h1>
+        <p>ここにサイトのテーマや紹介文を入れる</p>
     </section>
+
+    <!-- NEWS -->
+    <section id="news">
+        <h2>Latest News</h2>
+        <p>最新情報をここに表示</p>
+    </section>
+
+    <!-- TALENT -->
+    <section id="talent">
+        <h2>Our Talents</h2>
+        <div class="talent">
+            <img src="person1.jpg" alt="Person 1">
+            <h3>タレント名1</h3>
+            <a href="https://youtube.com">YouTube</a>
+            <a href="https://x.com">X (Twitter)</a>
+        </div>
+        <div class="talent">
+            <img src="person2.jpg" alt="Person 2">
+            <h3>タレント名2</h3>
+            <a href="https://youtube.com">YouTube</a>
+            <a href="https://x.com">X (Twitter)</a>
+        </div>
+    </section>
+
+    <!-- コラボ予定 -->
+    <section id="collaboration">
+        <h2>Upcoming Collaborations</h2>
+        <p>コラボ予定をここに記載</p>
+    </section>
+
+    <!-- スムーズスクロール用のJavaScript -->
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
 </body>
+</html>
