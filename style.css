@@ -21,7 +21,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* ← スマホでも必ず横並びにする */
 }
 nav ul li {
     margin: 0;
@@ -32,6 +32,7 @@ nav ul li a {
     font-weight: bold;
     padding: 10px 15px;
     display: block;
+    white-space: nowrap; /* ← 文字を折り返さないようにする */
 }
 
 /* 仕切り線 */
@@ -85,14 +86,17 @@ section {
     text-decoration: none;
 }
 
-/* スマホ対応（ナビバーを横並び＋文字サイズ調整） */
+/* スマホ対応（横並び強制＋フォントサイズ調整） */
 @media (max-width: 768px) {
     nav ul {
-        flex-wrap: nowrap;
-        justify-content: space-around;
+        flex-wrap: nowrap; /* ← これで絶対に横並び */
+        overflow-x: auto;  /* ← 画面幅が足りなければ横スクロール */
+    }
+    nav ul li {
+        flex-shrink: 0; /* ← ナビゲーションが縮まないようにする */
     }
     nav ul li a {
-        font-size: 14px;
-        padding: 8px 10px;
+        font-size: 12px; /* ← 文字サイズをさらに小さく */
+        padding: 6px 8px;
     }
 }
