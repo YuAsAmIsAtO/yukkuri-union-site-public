@@ -1,11 +1,15 @@
-/* 全体のスタイル */
+/* =========================================
+   🎨 全体のスタイル
+========================================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding-top: 50px;
 }
 
-/* ナビゲーションバー（固定表示） */
+/* =========================================
+   📌 ナビゲーションバー（固定表示）
+========================================= */
 nav {
     position: fixed;
     top: 0;
@@ -34,14 +38,9 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* 各セクション */
-section {
-    padding: 80px 20px;
-    min-height: 100vh;
-    text-align: center;
-}
-
-/* HOMEセクション（メイン画像） */
+/* =========================================
+   🏠 HOME セクション（メイン画像）
+========================================= */
 #home {
     text-align: center;
     padding: 50px 0;
@@ -54,7 +53,93 @@ section {
     margin: 0 auto; /* 中央配置 */
 }
 
-/* 動画セクション */
+/* =========================================
+   📌 各セクション共通スタイル
+========================================= */
+section {
+    padding: 80px 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* =========================================
+   📺 アップ主（upnushi）リスト
+========================================= */
+.upnushi-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.upnushi {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.upnushi img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* =========================================
+   🔀 タブ切り替えボタン
+========================================= */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tab-button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: #333;
+    color: white;
+}
+
+/* =========================================
+   🎞️ 動画リスト（横スクロール対応）
+========================================= */
+.video-list {
+    display: none;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.video-list.active {
+    display: flex;
+}
+
+.video {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.video img {
+    width: 120px;
+    height: 90px;
+    border-radius: 5px;
+}
+
+/* =========================================
+   📺 動画セクション
+========================================= */
 .video-section {
     display: none;
 }
@@ -69,33 +154,9 @@ section {
     gap: 20px;
 }
 
-.video img {
-    width: 120px;
-    height: 90px;
-    border-radius: 8px;
-}
-
-/* タレントリスト */
-.talent-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.talent {
-    width: 250px;
-    margin: 20px;
-    text-align: center;
-}
-
-.talent img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* スマホ対応 */
+/* =========================================
+   📌 スマホ対応
+========================================= */
 @media (max-width: 768px) {
     nav ul {
         flex-wrap: wrap;
