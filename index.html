@@ -14,7 +14,6 @@
         <ul>
             <li><a href="#home">HOME</a></li>
             <li><a href="#news">NEWS</a></li>
-            <li><a href="#videos">VIDEOS</a></li>
             <li><a href="#upnushi">UPNUSHI</a></li>
             <li><a href="#collaboration">COLLABORATION</a></li>
         </ul>
@@ -32,62 +31,41 @@
         <p>最新のお知らせをここに表示</p>
     </section>
 
-    <!-- 動画セクション -->
-    <section id="videos">
-        <h2>VIDEOS 🎥</h2>
-
-        <!-- タブ切り替え -->
-        <div class="tab-container">
-            <button class="tab-button active" onclick="switchTab('new')">新着動画 🔥</button>
-            <button class="tab-button" onclick="switchTab('recommended')">おすすめ動画 🌟</button>
-        </div>
-
-        <!-- 新着動画 -->
-        <div id="new-videos" class="video-section active">
-            <div class="channel">
-                <h3>実況者A</h3>
-                <div class="video-container">
-                    <div class="video">
-                        <img src="thumbnail1.jpg" alt="新着動画1">
-                        <a href="https://youtube.com/watch?v=xxxxx" target="_blank">タイトル1</a>
-                    </div>
-                    <div class="video">
-                        <img src="thumbnail2.jpg" alt="新着動画2">
-                        <a href="https://youtube.com/watch?v=xxxxx" target="_blank">タイトル2</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- おすすめ動画 -->
-        <div id="recommended-videos" class="video-section">
-            <div class="channel">
-                <h3>実況者B</h3>
-                <div class="video-container">
-                    <div class="video">
-                        <img src="thumbnail3.jpg" alt="おすすめ動画1">
-                        <a href="https://youtube.com/watch?v=xxxxx" target="_blank">おすすめ1</a>
-                    </div>
-                    <div class="video">
-                        <img src="thumbnail4.jpg" alt="おすすめ動画2">
-                        <a href="https://youtube.com/watch?v=xxxxx" target="_blank">おすすめ2</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
     <!-- UPNUSHI -->
     <section id="upnushi">
         <h2>UPNUSHI</h2>
         <div class="upnushi-list">
+
+            <!-- 実況者A -->
             <div class="upnushi">
-                <img src="upnushi1.jpg" alt="アップ主1">
-                <p>実況者1</p>
+                <img src="upnushi1.jpg" alt="実況者1">
+                <h3>実況者A</h3>
                 <a href="https://youtube.com/channel/xxxxx" target="_blank">YouTube</a>
                 <a href="https://twitter.com/xxxxx" target="_blank">X</a>
+
+                <!-- タブ切り替え -->
+                <div class="tab-container">
+                    <button class="tab-button active" onclick="switchVideoTab(this, 'new-videos-a')">新着動画</button>
+                    <button class="tab-button" onclick="switchVideoTab(this, 'recommended-videos-a')">おすすめ動画</button>
+                </div>
+
+                <!-- 新着動画（デフォルト表示） -->
+                <div id="new-videos-a" class="video-list active">
+                    <div class="video"><img src="thumbnail1.jpg"><a href="#">動画1</a></div>
+                    <div class="video"><img src="thumbnail2.jpg"><a href="#">動画2</a></div>
+                    <div class="video"><img src="thumbnail3.jpg"><a href="#">動画3</a></div>
+                </div>
+
+                <!-- おすすめ動画 -->
+                <div id="recommended-videos-a" class="video-list">
+                    <div class="video"><img src="thumbnail4.jpg"><a href="#">おすすめ1</a></div>
+                    <div class="video"><img src="thumbnail5.jpg"><a href="#">おすすめ2</a></div>
+                    <div class="video"><img src="thumbnail6.jpg"><a href="#">おすすめ3</a></div>
+                </div>
             </div>
+
+            <!-- 他の実況者も同じ構造で追加 -->
+
         </div>
     </section>
 
